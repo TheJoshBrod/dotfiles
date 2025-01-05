@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Makes a new function to enter the new directory you make
+cdmk() {
+    mkdir "$1"
+    cd "$1"
+}
+alias mkcd='cdmk'
+
+# Auto creates a Python virtual environment and activates it
+virtual() {
+    if [ "$1" = "c" ]; then
+        python3 -m venv env
+    elif [ "$1" = "e" ]; then
+        source env/bin/activate
+    elif [ "$1" = "ce" ]; then
+        python3 -m venv env
+        source env/bin/activate
+    else
+        echo "Invalid argument. Use 'c' to create and 'e' to activate or 'ce' to activate."
+    fi
+}
+alias venv='virtual'
