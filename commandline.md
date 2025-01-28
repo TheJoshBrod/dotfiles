@@ -1,11 +1,14 @@
 # Always forget bash commands
 
-### Debugging C++
+## Debugging C++
 
 - `ulimit -c unlimited`  
   **Creates a core dump**: Takes a snapshot of the C++ executable; debuggers like `gdb` can go back and run through it.
 
-### General Python
+- `gdb <executable>`  
+  **Goes through each line of the assembly as a debugger**
+
+## General Python
 
 - `python3 -m venv env`  
   **Make a virtual environment**: Creates an environment called whatever is after `venv`.
@@ -22,7 +25,7 @@
 - `pydocstyle <python_exe>`  
   **Style Check Docstring**  
 
-### Web Systems Commands
+## Web Systems Commands
 
 - `python3 -m http.server 8000`  
   **Start local host**  
@@ -39,7 +42,18 @@
 - `telnet <IP> <Port>`  
   **Send WebSocket message**: Sends messages after connecting.
 
-### For Fun
+## Convert file types
+
+- `for file in *.heic; do convert "$file" "${file%.heic}.png"; done`    
+  **HEIC -> png/jpg**
+
+- `for file in *.png; do convert "$file" -background white -flatten "${file%.png}.jpg"; done`  
+  **png -> jpg (transparent turns white, default black)**
+
+- `for file in *.jpg; do convert "$file" "${file%.jpg}.png"; done`  
+  **jpg -> png**
+
+## For Fun
 
 - `figlet`  
   **Pipes into Bubble Letters**  
