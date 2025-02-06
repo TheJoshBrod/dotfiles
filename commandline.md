@@ -25,6 +25,15 @@
 - `pydocstyle <python_exe>`  
   **Style Check Docstring**  
 
+- `sudo apt install python3.*`  
+  **\* represents python version to install**
+
+- `sudo update-alternatives --config python3`  
+  **Change working python version**
+
+- `sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.\* 3`  
+  **Adds installed version of python to list of versions you can set as your default in the command above**
+
 ## Web Systems Commands
 
 - `python3 -m http.server 8000`  
