@@ -1,47 +1,213 @@
-#####################
-# Generic gitignore #
-#####################
+########################
+# Generic gitignore
+########################
 
-## Dont commit test output or temporary files
+# Temporary / test output
 tmp
 output
+files_for_autograder_io/
+*/var/*
 
-
-# Python
-*.pyc
+# Byte-compiled / optimized / DLL files
 __pycache__/
-*.egg-info*
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
 dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
 env/
 venv/
 venv3/
 .venv/
-.pytest_cache
+ENV/
+env.bak/
+venv.bak/
+.pdm-python
+.pdm-build/
+.pixi
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py.cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask
+instance/
+.webassets-cache
+
+# Scrapy
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Environment / dependency managers
+# pyenv
+# .python-version
+# pipenv
+#Pipfile.lock
+# UV
+#uv.lock
+# poetry
+#poetry.lock
+#poetry.toml
+# pdm
+#pdm.lock
+#pdm.toml
+# pixi
+#pixi.lock
+
+# PEP 582
+__pypackages__/
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+*.sage.py
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject/
+
+# mkdocs
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre
+.pyre/
+
+# pytype
+.pytype/
+
+# Cython
+cython_debug/
+
+# PyCharm
+#.idea/
+
+# Abstra
+.abstra/
+
+# VS Code
+.vscode/
+# .vscode/ (optional, uncomment if needed)
+
+# Ruff
+.ruff_cache/
+
+# PyPI config
+.pypirc
+
+# Cursor editor
+.cursorignore
+.cursorindexingignore
+
+# Marimo
+marimo/_static/
+marimo/_lsp/
+__marimo__/
+
+########################
+# Other languages/tools
+########################
 
 # JavaScript
 bundle.js
 *node_modules*
-files_for_autograder_io/
-*/var/*
 
 # Virtual Machines
 .vagrant/
 
-# Text editors and IDEs
+########################
+# Editors / IDEs
+########################
 *~
 *.lock
 *.swp
-.vscode
-.ropeproject/
-.vscode/
-.idea
+.idea/
 
-# macOS system files
+########################
+# OS-specific
+########################
+
+# macOS
 *.DS_Store
+Icon
 
-# Zone Identifiers
+# Windows Zone Identifiers
 *Zone.Identifier
 
-# Google Drive and Dropbox
-Icon
+# Google Drive / Dropbox
 .dropbox*
