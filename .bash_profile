@@ -21,7 +21,11 @@ fi
 parse_git_branch() {
     local branch_name=$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/')
     if [ -n "$branch_name" ]; then
-        echo " [$branch_name]"
+        if ! git diff-index --quiet HEAD -- 2> /dev/null; then
+            echo " [$branch_name*]" # Uncommitted changes
+        else
+            echo " [$branch_name]" # No uncommitted changes
+        fi
     fi
 }
 export PS1='\[\e[38;5;34m\]\u\e[38;5;15m:\[\e[38;2;0;121;222m\]\w\[\e[38;5;91m\]$(parse_git_branch)\[\e[0m\]$ '
