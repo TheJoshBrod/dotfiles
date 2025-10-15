@@ -24,6 +24,3 @@ alias venv='virtual'
 
 # Removes all Zone.Identifiers files in working directory
 alias rzi="find . -name '*Zone.Identifier' -type f -delete"
-
-# Opens QT
-alias qt="/home/jodab/Spark/QT_install/Tools/QtCreator/bin/qtcreator"
