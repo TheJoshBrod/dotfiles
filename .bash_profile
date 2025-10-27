@@ -1,3 +1,8 @@
+# Load in bashrc
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+fi
+
 ###Custom Functions##
 
 # Defaults ls to be colorful
