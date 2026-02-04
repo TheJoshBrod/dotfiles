@@ -36,4 +36,4 @@ parse_git_branch() {
 export PS1='\[\e[38;5;34m\]\u\e[38;5;15m:\[\e[38;2;0;121;222m\]\w\[\e[38;5;91m\]$(parse_git_branch)\[\e[0m\]$ '
 
 ### Load API keys into sh vars ###
-source ~/.dotfiles/secrets/api_keys
+[ -f ~/.dotfiles/secrets/api_keys ] && source ~/.dotfiles/secrets/api_keys
