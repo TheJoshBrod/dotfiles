@@ -30,3 +30,12 @@ alias venv='virtual'
 
 # Removes all Zone.Identifiers files in working directory
 alias rzi="find . -name '*Zone.Identifier' -type f -delete"
+
+# Antigravity wsl extension
+# **Device Specific Info**
+antigravity() {
+  local dir="${1:-$PWD}"
+  dir="$(realpath "$dir")"
+  /mnt/c/Users/jodab/AppData/Local/Programs/Antigravity/bin/antigravity \
+    --folder-uri "vscode-remote://wsl+Ubuntu-22.04$dir"
+}
